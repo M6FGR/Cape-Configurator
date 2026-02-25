@@ -1,0 +1,40 @@
+# Mandatory: The loader type. For NeoForge, this is typically javafml.
+modLoader = "javafml"
+
+# Mandatory: The version range of the loader. [4,) is standard for NeoForge 21.
+loaderVersion = "[4,)"
+
+# Mandatory: The license for your mod.
+license = "All Rights Reserved"
+
+[[mixins]]
+config="cape_config.mixins.json"
+
+[[mods]]
+# Mandatory: Your mod ID.
+modId = "cape_config"
+# Mandatory: Your mod version.
+version = "1.21.1-1.0"
+# Mandatory: Display name.
+displayName = "Cape Configurator"
+# Optional: Authors.
+authors = "M6FGR"
+# Mandatory: Description.
+description = '''A simple mod to make your cape more customizable!'''
+
+# NeoForge 1.21.1 uses [[dependencies.modId]] with specific field names.
+[[dependencies.cape_config]]
+modId = "neoforge"
+type = "required"
+# NeoForge version ranges usually start with the major version (e.g., 21)
+versionRange = "[21.1.25,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.cape_config]]
+modId = "minecraft"
+type = "required"
+# A proper range ensures it doesn't try to run on 1.22
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"

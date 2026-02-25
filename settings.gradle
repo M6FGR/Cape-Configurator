@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            name = 'MinecraftForge'
+            url = 'https://maven.minecraftforge.net/'
+        }
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.7.0'
+}
+
+include '1.20'
+include '1.21'
+
+project(':1.20').projectDir = file('versions/forge/1.20')
+
+project(':1.21').projectDir = file('versions/neoforge/1.21')
+rootProject.name = 'cape-configuration'

@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "M6FGR.cape_config.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "cape_config.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "AbstractClientPlayerMixin",
+    "PlayerInfoMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
